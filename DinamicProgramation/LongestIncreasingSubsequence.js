@@ -1,4 +1,4 @@
-
+//by Jonas-Grossi
 const LongestIncreasingSubsequence = (array) => {
     const lengthArray = array.length
 
