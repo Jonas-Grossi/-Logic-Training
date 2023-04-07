@@ -19,14 +19,17 @@ Repetição: Os passos de divisão, classificação e mesclagem são repetidos r
 metade da matriz, até que a matriz inteira esteja classificada. */
 
 
-let mergeSort = arr => {
-    if (arr.length <= 1) {
-        return arr;
+let mergeSort = array => {
+    if (array.length <= 1) {
+        //console.log(array)
+        return array;
     }
-    let middle = Math.floor(arr.length / 2);
-    let left = arr.slice(0, middle);
-    let right = arr.slice(middle);
+    let middle = Math.floor(array.length / 2);
+    let left = array.slice(0, middle);
+    let right = array.slice(middle);
+
     return merge(mergeSort(left), mergeSort(right));
+    //let array = [5, 3, 8, 4];
 }
 
 let merge = (left, right) => {
@@ -46,5 +49,6 @@ let merge = (left, right) => {
 }
 
 
-let arr = [5, 3, 8, 4, 2];
-console.log(mergeSort(arr)); // [2, 3, 4, 5, 8]
+//let array = [5, 3, 8, 4];
+let array = [5, 3, 8, 4, 2, 10, 9, 7, 11, 22, 15, 35, 99, 70, 50];
+console.log(mergeSort(array)); 
